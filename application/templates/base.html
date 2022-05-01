@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- ref stylesheet from static folder -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+    <!--<link rel="stylesheet" href="styles.css">-->
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <section class="head1">
+        <div class="container">
+                        <nav class="navbar">
+                <div class="container-fluid">
+                    <a class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home">
+                            <p class="pnav">Home</p>
+                        </a>
+                    </a>
+                    <a class="nav-item">
+                        <a class="nav-link" href="/recipes">
+                            <p class="pnav">Recipes</p>
+                        </a>
+                    </a>
+                    <a class="nav-item">
+                        <a class="nav-link" href="#">
+                            <p class="pnav">Food Stories</p>
+                        </a>
+                    </a>
+                    <a class="nav-item">
+                        <a class="nav-link" href="#">
+                            <p class="pnav">Carbon Footprint</p>
+                        </a>
+                    </a>
+                    <a class="nav-item">
+                        <a class="nav-link" href="#">
+                            <p class="pnav">Search Foods</p>
+                        </a>
+                    </a>
+                    <a class="nav-item">
+                        <a class="nav-link" href="#">
+                            <p class="pnav">Submit your own</p>
+                        </a>
+                    </a>
+                    <a class="nav-item">
+                        <a class="nav-link" href="/signup">
+                            <p class="pnav">Favourites</p>
+                        </a>
+                    </a>
+                </div>
+            </nav>
+            <div class="center">
+                <h1 class="header"> RECIPEASY.</h1>
+                <p>Food made simple.</p>
+            </div>
+        </div>
+    </section>
+    {% block content %}
+    {% endblock  %}
+
+</body>
+
+
+<footer>
+
+</footer>
+
+</html>

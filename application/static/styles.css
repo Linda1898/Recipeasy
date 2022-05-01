@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+section {
+    height: 100vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    vertical-align: 50%;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    color: #f1f1f1;
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    max-width: 100%;
+    align-items: center;
+    border-image: none;
+    justify-content: center;
+    height: 100vh;
+}
+
+.head1 {
+    background-image: url(images/head3.jpeg);
+}
+
+.head2 {
+    background-image: url(images/head2.jpeg);
+}
+
+.one {
+    background-image: url(images/sqrgreen.jpeg);
+}
+
+.two {
+    background-color: #B8D686;
+}
+
+.three {
+    background-color: #D67D70;
+}
+
+.four {
+    background-color: #D9BEBA;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    color: #D67D70;
+    font-size: 3vw;
+}
+
+.header {
+    font-family: 'Abril Fatface', cursive;
+    color: #D67D70;
+    font-size: 15vw;
+}
+
+h2 {
+    font-family: 'Abril Fatface', cursive;
+    color:  #B8D686;
+    font-size: 3vw;
+}
+
+p {
+    font-family: 'Comfortaa', cursive;
+    color: #D67D70;
+    font-size: 2vw;
+}
+
+.pnav {
+    font-family: 'Comfortaa', cursive;
+    color: #D67D70;
+    font-size: 0.9vw;
+}
+
+.pgreen {
+    font-family: 'Comfortaa', cursive;
+    color: #B8D686;
+}
+
+.ppink {
+    font-family: 'Comfortaa', cursive;
+    color: #D9BEBA;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+  }
+
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .navbar {
+    display: inline-block;
+}
+
+.col {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+}
+
+.pinklink {
+    font-family: 'Comfortaa', cursive;
+    color: #D67D70;
+    font-size: 4vw;
+    text-decoration: none;
+}
+
+.pinklink:hover {
+    font-family: 'Comfortaa', cursive;
+    color: #D9BEBA;
+    font-size: 4vw;
+    text-decoration: none;
+}
+
+.link {
+    font-family: 'Comfortaa', cursive;
+    color: #D67D70;
+    font-size: 4vw;
+    text-decoration: none;
+}
+
+.link:hover {
+    font-family: 'Comfortaa', cursive;
+    color: #B8D686;
+    font-size: 4vw;
+    text-decoration: none;
+}
+
+.greenlink {
+    font-family: 'Comfortaa', cursive;
+    color: #B8D686;
+    font-size: 4vw;
+    text-decoration: none;
+}
+
+.greenlink:hover {
+    font-family: 'Comfortaa', cursive;
+    color: #D9BEBA;
+    font-size: 4vw;
+    text-decoration: none;
+}
+  thead, th, tr, tbody, .table{
+
+     border-color: #B8D686 ;
+  }
+
+  .card-body {
+      background-color: #B8D686;
+  }
+  .pnav:hover {
+    font-family: 'Comfortaa', cursive;
+    color: #B8D686;
+    font-size: 0.9vw;
+    }
+
+@media screen and (max-width: 800px) and (min-height: 500px) {
+
+    .row {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
