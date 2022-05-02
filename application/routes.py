@@ -38,16 +38,16 @@ def signup():
 def home():
     return render_template("home.html")
 
-@app.route("/recipes")
-def recipes():
+@app.route("/recipes/<int:id>")
+def recipes(id):
     # add random for variable
-    recipe1 = dbscript.get_recipe_dictionary(1)
+    recipe1 = service.get_recipe_dictionary(id)
     return render_template("recipes.html", recipe1=recipe1)
 
 @app.route("/collections")
 def collection():
     # add random for variable
-    collection1 = dbscript.get_collection_dictionary(1)
+    collection1 = service.get_collection_dictionary(1)
     return render_template("collections.html", collection1=collection1)
 # {{collection1['collection_name']}}
 # {{collection1['collection_description']}}
