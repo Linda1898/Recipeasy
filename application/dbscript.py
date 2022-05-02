@@ -18,11 +18,28 @@ engine = create_engine('mysql+pymysql://root:password@localhost/foodstories2504'
 Session = sessionmaker(bind=engine)
 session = Session()
 
-def show_recipe(id):
+def get_recipe_dictionary(id):
     recipe_table = session.query(Recipe).filter_by(recipe_id=id).first()
-    # recipe_dict = {'recipe_name': recipe_table.recipe_name, 'recipe_description': recipe_table.recipe_description}
+    recipe_dict = {'recipe_name': recipe_table.recipe_name, 'recipe_description': recipe_table.recipe_description}
+    print(recipe_dict['recipe_name'])
+    return recipe_dict
+
+def get_collection_dictionary(id):
+    collection_table = session.query(Collection).filter_by(collection_id=id).first()
+    collection_dict = {'collection_id': collection_table.collection_id, 'collection_name': collection_table.collection_name, 'collection_description': collection_table.collection_description }
+    return collection_dict
+
+
+    print(recipe_table.recipe_name)
+    # recipe_list = []
+    # recipe_list.append(recipe_table.recipe_name)
+    # recipe_list.append(recipe_table.recipe_id)
+
+
+
+    # print(recipe_dict)
     # return recipe_dict
-    return recipe_table
+
 def search_recipe():
     search_results = []
     recipe_table = session.query(Recipe).all()
@@ -34,10 +51,6 @@ def search_recipe():
             print(row.recipe_name)
             print(row.recipe_method)
             print(row.recipe_description)
-
-# test code
-# show_recipe(1)
-# search_recipe()
 
 def get_nutrition_list(food_id):
     total_nutrition = session.query(Nutrition).filter_by(nutrition_id=food_id).first()
@@ -54,4 +67,6 @@ def get_recipe_nutrition_total():
         nutrition_total_list.append(float(nutrition_list_asparagus[i]) + float(nutrition_list_beefmince[i]))
     print(nutrition_total_list)
 
-get_recipe_nutrition_total()
+# test code
+# search_recipe()
+# get_recipe_nutrition_total()
