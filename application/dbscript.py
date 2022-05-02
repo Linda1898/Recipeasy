@@ -20,9 +20,9 @@ session = Session()
 
 def show_recipe(id):
     recipe_table = session.query(Recipe).filter_by(recipe_id=id).first()
-    recipe_dict = {'recipe_name': recipe_table.recipe_name, 'recipe_description': recipe_table.recipe_description}
-    return recipe_dict
-
+    # recipe_dict = {'recipe_name': recipe_table.recipe_name, 'recipe_description': recipe_table.recipe_description}
+    # return recipe_dict
+    return recipe_table
 def search_recipe():
     search_results = []
     recipe_table = session.query(Recipe).all()
