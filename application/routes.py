@@ -1,7 +1,7 @@
 import json
 from flask import render_template, request, jsonify, session, redirect, url_for, Flask
 import service
-from application import app, dbscript
+from application import app
 from application.forms.new_user_form import SignUpForm
 from application.models.food_group import FoodGroup
 from application.models.recipe import Recipe
@@ -41,16 +41,15 @@ def home():
 @app.route("/recipes/<int:id>")
 def recipes(id):
     # add random for variable
-    recipe1 = service.get_recipe_dictionary(id)
+    recipe1 = service.get_recipe_object(id)
     return render_template("recipes.html", recipe1=recipe1)
 
 @app.route("/collections")
 def collection():
     # add random for variable
-    collection1 = service.get_collection_dictionary(1)
+    collection1 = service.get_collection_object(1)
     return render_template("collections.html", collection1=collection1)
-# {{collection1['collection_name']}}
-# {{collection1['collection_description']}}
+# {{collection1.collection_name}}
 
 @app.route('/user_name')
 def user_name():

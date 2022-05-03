@@ -12,6 +12,8 @@ from application.models.collection import Collection
 from application.models.recipe_collection import RecipeCollection
 
 
+
+
 def add_new_user(user):
     db.session.add(user)
     db.session.commit()
@@ -23,18 +25,6 @@ def get_recipe_dict(id):
         return none
 
 
-def get_recipe_dictionary(id):
-    recipe = db.session.query(Recipe).filter_by(recipe_id=id).first()
-    # recipe_dict = {'recipe_name': recipe_table.recipe_name, 'recipe_description': recipe_table.recipe_description}
-    # print(recipe_dict['recipe_name'])
-    # return recipe_dict
-    return recipe
-
-def get_collection_dictionary(id):
-    collection_table = db.session.query(Collection).filter_by(collection_id=id).first()
-    collection_dict = {'collection_id': collection_table.collection_id, 'collection_name': collection_table.collection_name, 'collection_description': collection_table.collection_description }
-    return collection_dict
-    print(recipe_table.recipe_name)
     # recipe_list = []
     # recipe_list.append(recipe_table.recipe_name)
     # recipe_list.append(recipe_table.recipe_id)
@@ -68,3 +58,6 @@ def get_recipe_nutrition_total():
     for i in range(0, 10):
         nutrition_total_list.append(float(nutrition_list_asparagus[i]) + float(nutrition_list_beefmince[i]))
     print(nutrition_total_list)
+
+
+
