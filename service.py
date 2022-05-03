@@ -11,8 +11,59 @@ from application.models.liked import Liked
 from application.models.collection import Collection
 from application.models.recipe_collection import RecipeCollection
 
+def get_collection_object(id):
+    collection = db.session.query(Collection).filter_by(collection_id=id).first()
+    return collection
 
 
+def get_food_group_object(id):
+    food_group = db.session.query(FoodGroup).filter_by(food_group_id=id).first()
+    return food_group
+
+
+def get_food_item_object(id):
+    food_item = db.session.query(FoodItem).filter_by(food_id=id).first()
+    return food_item
+
+
+def get_food_source_object(id):
+    food_source = db.session.query(FoodSource).filter_by(source_id=id).first()
+    return food_source
+
+
+def get_gender_object(id):
+    gender = db.session.query(Gender).filter_by(gender_id=id).first()
+    return gender
+
+
+def get_ingredient_object(id):
+    ingredient = db.session.query(Ingredient).filter_by(ingredient=id).first()
+    return ingredient
+
+
+def get_liked_object(id):
+    liked = db.session.query(Liked).filter_by(liked=id).first()
+    return liked
+
+
+def get_nutrition_object(id):
+    nutrition = db.session.query(Nutrition).filter_by(nutrition_id=id).first()
+    return nutrition
+
+
+def get_recipe_object(id):
+    recipe = db.session.query(Recipe).filter_by(recipe_id=id).first()
+    return recipe
+
+
+def get_recipe_collection_object(id):
+    recipe_collection = db.session.query(RecipeCollection.filter_by(recipe_collection_id=id).first()
+    return recipe_collection
+
+
+def get_user_table_object(id):
+    user_table = db.session.query(UserTable).filter_by(user_id=id).first()
+    return user_table
 
 def add_new_user(user):
     db.session.add(user)
@@ -30,6 +81,7 @@ def get_recipe_dict(id):
     # recipe_list.append(recipe_table.recipe_id)
     # print(recipe_dict)
     # return recipe_dict
+
 
 def search_recipe():
     search_results = []
