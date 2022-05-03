@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+{% block content %}
+<section class="two">
+    <div class="container">
+        <div class="center">
+            <form action="" method="post">
+                <p>
+                    {{form.search.label}} <br>
+                    {{form.search(size=30)}}
+                </p>
+                <p>{{form.quantity.label}} <br>
+                    {{form.quantity(size=30)}}
+                <p> {{form.submit()}}</p>
+                <p> {{message}}</p>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}

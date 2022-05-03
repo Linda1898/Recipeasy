@@ -1,0 +1,58 @@
+{% extends "base.html"%}
+{% block content %}
+<section class="two">
+    <div class="container">
+        <div class="center">
+            <p>
+            KCAL:
+                {{(((nutritionList.energy_kcal)/100)*quantity)}}
+            <br>
+            KJ:
+            {{(((nutritionList.energy_kj)/100)*quantity)}}
+                <br>
+            FAT:
+                {{(((nutritionList.fat)/100)*quantity)}}
+                <br>
+            SATURATES:
+                {{(((nutritionList.saturate)/100)*quantity)}}
+                <br>
+            CARBOHYDRATE:
+                {{(((nutritionList.carbohydrate)/100)*quantity)}}
+                <br>
+            SUGAR:
+                {{(((nutritionList.sugar)/100)*quantity)}}
+                <br>
+            STARCH:
+                {{(((nutritionList.starch)/100)*quantity)}}
+                <br>
+            FIBRE:
+{{(((nutritionList.fibre)/100)*quantity)}}
+                <br>
+            PROTEIN:
+                {{(((nutritionList.protein)/100)*quantity)}}
+                <br>
+            SALT:
+                {{(((nutritionList.salt)/100)*quantity)}}
+            </p>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="three">
+    <div class="container">
+        <div class="center">
+            <p class="pgreen">
+            Green house gass emmission: {{(((environment_list.ghg_emission)/100)*quantity)}}
+                <br>
+            Land use: {{(((environment_list.land_use)/100)*quantity)}}
+                <br>
+            Freshwater withdraw: {{(((environment_list.freshwater_withdraw)/100)*quantity)}}
+                <br>
+            Land use: {{(((environment_list.land_use)/100)*quantity)}}
+            </p>
+        </div>
+    </div>
+    </div>
+</section>
+
+{% endblock %}
