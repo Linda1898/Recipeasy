@@ -57,7 +57,7 @@ def get_recipe_object(id):
 
 
 def get_recipe_collection_object(id):
-    recipe_collection = db.session.query(RecipeCollection.filter_by(recipe_collection_id=id).first()
+    recipe_collection = db.session.query(RecipeCollection).filter_by(recipe_collection_id=id).first()
     return recipe_collection
 
 
@@ -74,6 +74,15 @@ def get_recipe_dict(id):
         return Recipe.query.get(id)
     else:
         return none
+
+
+
+
+
+
+
+
+
 
 
     # recipe_list = []
