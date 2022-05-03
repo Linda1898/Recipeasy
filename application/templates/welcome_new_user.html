@@ -1,24 +1,20 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% block content %}
 <section class="two">
     <div class="container">
         <div class="center">
-            <h2> Sign Up </h2>
-            <form action="" method="post">
-                <p>
-                    {{form.username.label}} <br>
-                    {{form.username(size=30)}}
-                </p>
-                <p>
-                    {{form.password.label}} <br>
-                    {{form.password(size=30)}}
-                </p>
-                <p>
-                    {{form.user_name.label}} <br>
-                    {{form.user_name(size=30)}}
-                </p>
-                <p> {{form.submit()}}</p>
-            </form>
+            <p>
+                Welcome {{user_name}} here are your favourite recipes!
+            </p>
+        </div>
+    </div>
+</section>
+<section class="three">
+    <div class="container">
+        <div class="center">
+            <p>
+                {{recipes}}
+            </p>
         </div>
     </div>
     </div>
