@@ -15,7 +15,12 @@ def get_collection_object(id):
     collection = db.session.query(Collection).filter_by(collection_id=id).first()
     return collection
 
+def get_collection_object_all():
+    collection = db.session.query(Collection)
+    return collection
 
+
+get_collection_object
 def get_food_group_object(id):
     food_group = db.session.query(FoodGroup).filter_by(food_group_id=id).first()
     return food_group
@@ -55,6 +60,10 @@ def get_recipe_object(id):
     recipe = db.session.query(Recipe).filter_by(recipe_id=id).first()
     return recipe
 
+def get_recipe_object_all():
+    recipe = db.session.query(Recipe)
+    return recipe
+
 
 def get_recipe_collection_object(id):
     recipe_collection = db.session.query(RecipeCollection).filter_by(recipe_collection_id=id).first()
@@ -75,6 +84,24 @@ def get_recipe_dict(id):
     else:
         return none
 
+# food = get_food_item_object(1)
+# print(food)
+# food = food.__dict__
+# print(food)
+
+def get_recipe_matching_collection_id(coll_id):
+    recipe_collection = db.session.query(RecipeCollection).filter_by(collection_id=coll_id).first()
+    if recipe_collection == None:
+        print('nothing found')
+    else:
+        matching_recipe = recipe_collection.recipe_id
+        final_recipes = db.session.query(Recipe).filter_by(recipe_id=matching_recipe).first()
+        if final_recipes == None:
+            print('No')
+        else:
+            return final_recipes
+
+print(get_recipe_matching_collection_id(2))
 
 
 
@@ -83,14 +110,7 @@ def get_recipe_dict(id):
 
 
 
-
-
-    # recipe_list = []
-    # recipe_list.append(recipe_table.recipe_name)
-    # recipe_list.append(recipe_table.recipe_id)
-    # print(recipe_dict)
-    # return recipe_dict
-
+# NOT SURE ABOUT FILES BELOW THIS POINT:
 
 def search_recipe():
     search_results = []
