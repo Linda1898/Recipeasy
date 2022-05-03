@@ -516,4 +516,61 @@ values(	1	,	43	,	1	)	,
 (	114	,	72	,	10	)	;
 
 
+ALTER TABLE recipe
+	ADD collection_id int,
+	ADD FOREIGN KEY (collection_id) references collection(collection_id);
+	
+    
+INSERT into recipe(collection_id)
+values(3),
+(7),
+(3),
+(10),
+(6),
+(6),
+(3),
+(8),
+(4),
+(10);
 
+select * from recipe;
+
+UPDATE recipe
+SET collection_id = 3
+WHERE recipe_id = 1;
+
+UPDATE recipe
+SET collection_id = 7
+WHERE recipe_id = 2;
+
+UPDATE recipe
+SET collection_id = 3
+WHERE recipe_id = 3;
+
+UPDATE recipe
+SET collection_id = 10
+WHERE recipe_id = 4;
+
+UPDATE recipe
+SET collection_id = 6
+WHERE recipe_id = 5;
+
+UPDATE recipe
+SET collection_id = 6
+WHERE recipe_id = 6;
+
+UPDATE recipe
+SET collection_id = 3
+WHERE recipe_id = 7;
+
+UPDATE recipe
+SET collection_id = 8
+WHERE recipe_id = 8;
+
+UPDATE recipe
+SET collection_id = 4
+WHERE recipe_id = 9;
+
+UPDATE recipe
+SET collection_id = 10
+WHERE recipe_id = 10;
