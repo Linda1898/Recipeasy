@@ -76,7 +76,6 @@ def search():
     else:
         group = service.search_food_facts(user_search)
         foods = service.get_foods_by_foodssource(user_search)
-        recipes =
         return render_template('searchresults.html', group=group, foods=foods)
     return render_template('search.html', form=form, message=error)
 
