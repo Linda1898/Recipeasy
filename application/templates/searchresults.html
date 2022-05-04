@@ -43,19 +43,13 @@
     </div>
     </div>
         <section class="two">
-    <div class="container">
-        <div class="center">
-            <form action="" method="post">
-                <p  style="font-size: 1vw;"> Recipes containing members of this food group </p>
-                <p style="font-size: 1vw;">
-                    {{recipe.recipe_name}} </p>
-                <p style="font-size: 1vw;"> Description: </p>
-                 <p style="font-size: 0.9vw;">   {{recipe.recipe_description}}</p>
-                                    <p style="font-size: 1vw;"> Ingredients: </p>
-                    <p style="font-size: 0.9vw;">{{recipe.ingredient_quantity}}</p>
-                    <p style="font-size: 1vw;"> Method:</p>
-                    <p style="font-size: 0.9vw;">{{recipe.recipe_method}}</p>
-            </form>
+            <div class="container" style="width:100%;">
+    <div class="center" style="width:100%;">
+                <h1 style="font-size:1.5vw">  Here are some yummy ingredients, with some very cool facts, from this catagory. </h1>
+                    <br>
+        {% for food in foods %}
+            <p style="font-size:1.5vw" > Ingredient: {{food.food_name}} Greenhouse emissions: {{food.ghg_emission}} Land use: {{food.land_use}}  Water withdraw: {{food.freshwater_withdraw}}  </p>
+                {% endfor %}
         </div>
     </div>
     </div>

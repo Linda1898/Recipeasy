@@ -1,34 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="two">
-    <div class="container">
+<section class="four">
+    <div class="container" style="width:80% ; height:100%;" >
     <div class="centre" >
+        <BR>
+        {% for collection in collections %}
+        <a class="collectionlink" href="/collections/{{collection.collection_id}}">{{collection.collection_name}}</a>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;" href="/collections/1">Easy Meals</a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/2"> Vegan </a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/3"> Winter Warmers</a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/4"> Brunch </a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/5"> Seasonal </a>
-        <br>
-        <a class="pinklink" style="font-size:2vw;"  href="/collections/6"> Vegetarian </a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/7"> Curries </a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/8"> Dinner Parties </a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/9"> Baby Food </a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/10"> Healthy </a>
-        <br>
-        <a class="pinklink" style="font-size: 2vw;"  href="/collections/10"> Show all recipes </a>
+        <BR>
+        {% endfor %}
+    </div>
     </div>
     </div>
 </section>

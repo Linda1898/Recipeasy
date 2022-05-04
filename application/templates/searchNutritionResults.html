@@ -5,34 +5,34 @@
         <div class="center">
             <p>
             KCAL:
-                {{(((nutritionList.energy_kcal)/100)*quantity)}}
+                {{ (((nutritionList.energy_kcal)/100)*quantity)|round(2)}}
             <br>
             KJ:
-            {{(((nutritionList.energy_kj)/100)*quantity)}}
+            {{(((nutritionList.energy_kj)/100)*quantity)|round(2)}}
                 <br>
             FAT:
-                {{(((nutritionList.fat)/100)*quantity)}}
+                {{(((nutritionList.fat)/100)*quantity)|round(2)}}
                 <br>
             SATURATES:
-                {{(((nutritionList.saturate)/100)*quantity)}}
+                {{(((nutritionList.saturate)/100)*quantity)|round(2)}}
                 <br>
             CARBOHYDRATE:
-                {{(((nutritionList.carbohydrate)/100)*quantity)}}
+                {{(((nutritionList.carbohydrate)/100)*quantity)|round(2)}}
                 <br>
             SUGAR:
-                {{(((nutritionList.sugar)/100)*quantity)}}
+                {{(((nutritionList.sugar)/100)*quantity)|round(2)}}
                 <br>
             STARCH:
-                {{(((nutritionList.starch)/100)*quantity)}}
+                {{(((nutritionList.starch)/100)*quantity)|round(2)}}
                 <br>
             FIBRE:
-{{(((nutritionList.fibre)/100)*quantity)}}
+{{(((nutritionList.fibre)/100)*quantity)|round(2)}}
                 <br>
             PROTEIN:
-                {{(((nutritionList.protein)/100)*quantity)}}
+                {{(((nutritionList.protein)/100)*quantity)|round(2)}}
                 <br>
             SALT:
-                {{(((nutritionList.salt)/100)*quantity)}}
+                {{(((nutritionList.salt)/100)*quantity)|round(2)}}
             </p>
         </div>
     </div>
@@ -42,13 +42,13 @@
     <div class="container">
         <div class="center">
             <p class="pgreen">
-            Green house gass emmission: {{(((environment_list.ghg_emission)/100)*quantity)}}
+            Green house gass emmission: {{(((environment_list.ghg_emission)/100)*quantity)|round(2)}}
                 <br>
-            Land use: {{(((environment_list.land_use)/100)*quantity)}}
+            Land use: {{(((environment_list.land_use)/100)*quantity)|round(2)}}
                 <br>
-            Freshwater withdraw: {{(((environment_list.freshwater_withdraw)/100)*quantity)}}
+            Freshwater withdraw: {{(((environment_list.freshwater_withdraw)/100)*quantity)|round(2)}}
                 <br>
-            Land use: {{(((environment_list.land_use)/100)*quantity)}}
+            Land use: {{(((environment_list.land_use)/100)*quantity)|round(2)}}
             </p>
         </div>
     </div>

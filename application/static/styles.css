@@ -170,8 +170,21 @@ p {
      border-color: #B8D686 ;
   }
 
+  .collectionlink {
+    font-family: 'Comfortaa', cursive;
+    color: #D67D70;
+    font-size: 1.8vw;
+    text-decoration: none;
+}
+.collectionlink:hover {
+    font-family: 'Comfortaa', cursive;
+    color: #D9BEBA;
+    font-size: 2vw;
+    text-decoration: none;
+}
+
   .card-body {
-      background-color: #B8D686;
+      background-color: #D9BEBA;
   }
   .pnav:hover {
     font-family: 'Comfortaa', cursive;
@@ -187,5 +200,17 @@ p {
         align-items: center;
     }
 
+    .collectionlink {
+    font-family: 'Comfortaa', cursive;
+    color: #D67D70;
+    font-size: 3.5vw;
+    text-decoration: none;
+     }
+    .collectionlink:hover {
+    font-family: 'Comfortaa', cursive;
+    color: #D9BEBA;
+    font-size: 3.5vw;
+    text-decoration: none;
+}
 }
 

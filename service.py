@@ -12,7 +12,7 @@ from application.models.collection import Collection
 from application.models.recipe_collection import RecipeCollection
 
 def get_collection_object(id):
-    collection = db.session.query(Collection).filter_by(collection_id=id).first()
+    collection = db.session.query(Collection).filter_by(collection_id=id).all()
     return collection
 
 
@@ -21,9 +21,11 @@ def get_collection_object_all():
     return collection
 
 
+
 def get_food_group_object(id):
     food_group = db.session.query(FoodGroup).filter_by(food_group_id=id).first()
     return food_group
+
 
 
 def get_food_item_object(id):
@@ -42,7 +44,7 @@ def get_gender_object(id):
 
 
 def get_ingredient_object(id):
-    ingredient = db.session.query(Ingredient).filter_by(ingredient=id).first()
+    ingredient = db.session.query(Ingredient).filter_by(ingredient_id=id).first()
     return ingredient
 
 
@@ -56,18 +58,30 @@ def get_nutrition_object(id):
     nutrition = db.session.query(Nutrition).filter_by(nutrition_id=id).first()
     return nutrition
 
-print(get_nutrition_object(4))
+
 def get_recipe_object(id):
-    recipe = db.session.query(Recipe).filter_by(recipe_id=id).first()
+    recipe = db.session.query(Recipe).filter_by(recipe_id=id).all()
+    return recipe
+
+def get_collection_id(id):
+    recipe = db.session.query(Recipe).filter_by(collection_id=id).first
     return recipe
 
 def get_recipe_object_all():
     recipe = db.session.query(Recipe)
     return recipe
 
+print(get_collection_object_all())
+
 def get_recipe_collection_object(id):
-    recipe_collection = db.session.query(RecipeCollection).filter_by(recipe_collection_id=id).first()
+    recipe_collection = db.session.query(RecipeCollection).filter_by(recipe_collection_id=id).all()
     return recipe_collection
+
+def get_recipes_from_collection(id):
+    recipes = db.session.query(Recipe).filter_by(collection_id=id).all()
+    return recipes
+
+
 
 def get_user_table_object(id):
     user_table = db.session.query(UserTable).filter_by(user_id=id).first()
@@ -83,20 +97,12 @@ def get_recipe_dict(id):
     else:
         return None
 
-def get_recipe_by_foodssource(user_search):
-    source_name = user_search.lower()
-    group = db.session.query(FoodSource).filter_by(source_name=source_name).first()
-    source_id = group.source_id
-    food = db.session.query(FoodItem).filter_by(source_id=source_id).first()
-    food_id = food.food_id
-    ingredient = db.session.query(Ingredient).filter_by(food_id=food_id).first()
-    ingredient_id = ingredient.ingredient_id
-    recipe = db.session.query(Ingredient).filter_by(ingredient_id=ingredient_id).first()
-    recipe_id = recipe.recipe_id
-    recipe = db.session.query(Recipe).filter_by(recipe_id=recipe_id).first()
-    return recipe
-
-
+def get_foods_by_foodssource(user_search):
+    user_search = user_search.lower()
+    foods = db.session.query(FoodSource).filter_by(source_name=user_search).first()
+    id = foods.source_id
+    foods = db.session.query(FoodItem).filter_by(source_id=id).all()
+    return foods
 
 # food = get_food_item_object(1)
 # print(food)
@@ -104,8 +110,10 @@ def get_recipe_by_foodssource(user_search):
 # print(food)
 def search_food_facts(user_search):
     source_name = user_search.lower()
-    group = db.session.query(FoodSource).filter_by(source_name=source_name).first()
-    return group
+    food = db.session.query(FoodSource).filter_by(source_name=source_name).first()
+    return food
+
+
 
 def get_nutrition_by_name(food_name):
     food_name = food_name.lower()

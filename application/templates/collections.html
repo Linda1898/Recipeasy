@@ -3,13 +3,13 @@
 <section class="two">
     <div class="container">
         <div class="center">
-
-        <p> {{recipe.recipe_name}} </p>
+                    {% for recipe in recipes %}
+        <br>
+        <a class="pinklink" style="font-size: 1.6vw;" href="/recipe/{{recipe.recipe_id}}"><h1>{{recipe.recipe_name}}</h1></a>
             <br>
-            <p> {{recipe.recipe_description}} </p>
-            <br>
-
-            <p> {{message}} </p>
+            <p>{{recipe.recipe_description}}</p>
+        <br>
+        {% endfor %}
         </div>
     </div>
     </div>

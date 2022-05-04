@@ -40,10 +40,12 @@ def home():
     return render_template("home.html")
     # return render_template("home.html")
 
-@app.route("/recipes")
-def recipes():
-    recipe1 = service.get_recipe_object(1)
-    return render_template("recipes.html", recipe1=recipe1)
+@app.route("/recipe/<int:recipe_id>")
+def recipes(recipe_id):
+    recipe = service.get_recipe_object(recipe_id)
+    return render_template("recipe.html", recipe=recipe)
+
+print(service.get_recipe_object(6))
 
 @app.route('/user_name')
 def user_name():
@@ -51,14 +53,16 @@ def user_name():
 
 @app.route('/collectionsMenu')
 def collectionsmenu():
-    return render_template("collectionsMenu.html")
+    collections = service.get_collection_object_all()
+    return render_template("collectionsMenu.html", collections=collections)
 
 
 @app.route("/collections/<int:collection_id>")
 def collections(collection_id):
     error = ""
-    recipe = service.get_recipe_by_collection(collection_id)
-    return render_template("collections.html", recipe=recipe, message=error)
+    recipes = service.get_recipes_from_collection(collection_id)
+    return render_template("collections.html", recipes=recipes, message=error)
+
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
@@ -71,8 +75,9 @@ def search():
         error = "hmmm we don't seem to have any food sources by that name, try something else?"
     else:
         group = service.search_food_facts(user_search)
-        recipe = service.get_recipe_by_foodssource(user_search)
-        return render_template('searchresults.html', group=group, recipe=recipe)
+        foods = service.get_foods_by_foodssource(user_search)
+        recipes =
+        return render_template('searchresults.html', group=group, foods=foods)
     return render_template('search.html', form=form, message=error)
 
 @app.route('/searchNutrition', methods=['GET', 'POST'])
