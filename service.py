@@ -12,18 +12,20 @@ from application.models.collection import Collection
 from application.models.recipe_collection import RecipeCollection
 
 def get_collection_object(id):
-    collection = db.session.query(Collection).filter_by(collection_id=id).first()
+    collection = db.session.query(Collection).filter_by(collection_id=id).all()
     return collection
+
 
 def get_collection_object_all():
     collection = db.session.query(Collection)
     return collection
 
 
-get_collection_object
+
 def get_food_group_object(id):
     food_group = db.session.query(FoodGroup).filter_by(food_group_id=id).first()
     return food_group
+
 
 
 def get_food_item_object(id):
@@ -42,8 +44,9 @@ def get_gender_object(id):
 
 
 def get_ingredient_object(id):
-    ingredient = db.session.query(Ingredient).filter_by(ingredient=id).first()
+    ingredient = db.session.query(Ingredient).filter_by(ingredient_id=id).first()
     return ingredient
+
 
 
 def get_liked_object(id):
@@ -57,17 +60,27 @@ def get_nutrition_object(id):
 
 
 def get_recipe_object(id):
-    recipe = db.session.query(Recipe).filter_by(recipe_id=id).first()
+    recipe = db.session.query(Recipe).filter_by(recipe_id=id).all()
+    return recipe
+
+def get_collection_id(id):
+    recipe = db.session.query(Recipe).filter_by(collection_id=id).first
     return recipe
 
 def get_recipe_object_all():
     recipe = db.session.query(Recipe)
     return recipe
 
+print(get_collection_object_all())
 
 def get_recipe_collection_object(id):
-    recipe_collection = db.session.query(RecipeCollection).filter_by(recipe_collection_id=id).first()
+    recipe_collection = db.session.query(RecipeCollection).filter_by(recipe_collection_id=id).all()
     return recipe_collection
+
+def get_recipes_from_collection(id):
+    recipes = db.session.query(Recipe).filter_by(collection_id=id).all()
+    return recipes
+
 
 
 def get_user_table_object(id):
@@ -82,12 +95,37 @@ def get_recipe_dict(id):
     if id > 0:
         return Recipe.query.get(id)
     else:
-        return none
+        return None
+
+def get_foods_by_foodssource(user_search):
+    user_search = user_search.lower()
+    foods = db.session.query(FoodSource).filter_by(source_name=user_search).first()
+    id = foods.source_id
+    foods = db.session.query(FoodItem).filter_by(source_id=id).all()
+    return foods
 
 # food = get_food_item_object(1)
 # print(food)
 # food = food.__dict__
 # print(food)
+def search_food_facts(user_search):
+    source_name = user_search.lower()
+    food = db.session.query(FoodSource).filter_by(source_name=source_name).first()
+    return food
+
+
+
+def get_nutrition_by_name(food_name):
+    food_name = food_name.lower()
+    food = db.session.query(FoodItem).filter_by(food_name=food_name).first()
+    food_id = food.food_id
+    nutritionList = db.session.query(Nutrition).filter_by(nutrition_id=food_id).first()
+    return nutritionList
+
+def get_environmental_impact(food_name):
+    food_name = food_name.lower()
+    environment = db.session.query(FoodItem).filter_by(food_name=food_name).first()
+    return environment
 
 def get_recipe_matching_collection_id(coll_id):
     recipe_collection = db.session.query(RecipeCollection).filter_by(collection_id=coll_id).first()
@@ -100,14 +138,6 @@ def get_recipe_matching_collection_id(coll_id):
             print('No')
         else:
             return final_recipes
-
-print(get_recipe_matching_collection_id(2))
-
-
-
-
-
-
 
 
 # NOT SURE ABOUT FILES BELOW THIS POINT:
@@ -125,7 +155,6 @@ def search_recipe():
             print(row.recipe_description)
 
 def get_nutrition_list(food_id):
-
     total_nutrition = db.session.query(Nutrition).filter_by(nutrition_id=food_id).first()
     nutrition_list = [total_nutrition.energy_kcal, total_nutrition.energy_kj, total_nutrition.fat,
                       total_nutrition.saturate, total_nutrition.carbohydrate, total_nutrition.sugar,
@@ -133,12 +162,12 @@ def get_nutrition_list(food_id):
     return nutrition_list
 
 def get_recipe_nutrition_total():
-    nutrition_list_asparagus = get_nutrition_list(1)
-    nutrition_list_beefmince = get_nutrition_list(2)
-    nutrition_total_list = []
-    for i in range(0, 10):
-        nutrition_total_list.append(float(nutrition_list_asparagus[i]) + float(nutrition_list_beefmince[i]))
-    print(nutrition_total_list)
+     nutrition_list_asparagus = get_nutrition_list(1)
+     nutrition_list_beefmince = get_nutrition_list(2)
+     nutrition_total_list = []
+     for i in range(0, 10):
+         nutrition_total_list.append(float(nutrition_list_asparagus[i]) + float(nutrition_list_beefmince[i]))
+     print(nutrition_total_list)
 
 
 

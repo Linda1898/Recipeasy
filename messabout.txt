@@ -110,8 +110,8 @@ def user_name():
 # def recipes():
 #     # recipe1 = service.get_recipe_dict(1)
 #     # if not recipe1:
-#     #     return render_template("recipes.html")
-#     # return jsonify("recipes.html", recipe1)
+#     #     return render_template("recipe.html")
+#     # return jsonify("recipe.html", recipe1)
 #     recipe_table = Recipe.query.filter_by(recipe_id=1).first()
 #     recipe_name = recipe_table.recipe_name
 #     recipe_description = recipe_table.recipe_description
@@ -122,7 +122,7 @@ def user_name():
 #     prep_time = recipe_table.prep_time
 #     cook_time = recipe_table.cook_time
 #     serving = recipe_table.serving
-#     return render_template("recipes.html", recipe_name=recipe_name, recipe_description=recipe_description, recipe_method=recipe_method,ingredient_quantity=ingredient_quantity, course=course, cuisine=cuisine, prep_time=prep_time, cook_time=cook_time, serving=serving)
+#     return render_template("recipe.html", recipe_name=recipe_name, recipe_description=recipe_description, recipe_method=recipe_method,ingredient_quantity=ingredient_quantity, course=course, cuisine=cuisine, prep_time=prep_time, cook_time=cook_time, serving=serving)
 #
 # @app.route('/user_name')
 # def user_name():

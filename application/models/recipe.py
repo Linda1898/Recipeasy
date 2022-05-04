@@ -15,6 +15,7 @@ class Recipe(db.Model):
     prep_time: str
     cook_time: str
     serving: int
+    collection_id: int
 
     recipe_id = db.Column(db.Integer, primary_key=True)
     recipe_name = db.Column(db.String(50))
@@ -26,6 +27,7 @@ class Recipe(db.Model):
     prep_time = db.Column(db.String(20), nullable=False)
     cook_time = db.Column(db.String(20), nullable=False)
     serving = db.Column(db.Integer, nullable=False)
+    collection_id = db.Column(db.Integer, nullable=False)
 
     ingredient = db.relationship('Ingredient', backref='ingredient2')
     recipe_collection = db.relationship('RecipeCollection', backref='recipe_collection2')

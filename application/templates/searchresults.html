@@ -1,0 +1,56 @@
+{% extends "base.html"%}
+{% block content %}
+<section class="two">
+    <div class="container">
+        <div class="center">
+            <form action="" method="post">
+                <h1> {{group.source_name}} </h1>
+                <p> Fact:
+                    <br>
+                    {{group.source_fact1}} <br>
+                </p>
+                <p>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="three">
+    <div class="container">
+        <div class="center">
+            <form action="" method="post">
+                <p class="pgreen">
+                    Fact:
+                    <br>
+                    {{group.source_fact2}} <br>
+                </p>
+                <p>
+            </form>
+        </div>
+    </div>
+    </div>
+    <section class="four">
+    <div class="container">
+        <div class="center">
+            <form action="" method="post">
+                <p> Fact:
+                    <br>
+                    {{group.source_fact3}} <br>
+                </p>
+                <p>
+            </form>
+        </div>
+    </div>
+    </div>
+        <section class="two">
+            <div class="container" style="width:100%;">
+    <div class="center" style="width:100%;">
+                <h1 style="font-size:1.5vw">  Here are some yummy ingredients, with some very cool facts, from this catagory. </h1>
+                    <br>
+        {% for food in foods %}
+            <p style="font-size:1.5vw" > Ingredient: {{food.food_name}} Greenhouse emissions: {{food.ghg_emission}} Land use: {{food.land_use}}  Water withdraw: {{food.freshwater_withdraw}}  </p>
+                {% endfor %}
+        </div>
+    </div>
+    </div>
+{% endblock %}

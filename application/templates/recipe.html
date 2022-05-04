@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+    {% block content %}
+{% for recipe in recipe %}
+    <section class="four">
+        <div class="container">
+            <div class="center">
+                <h1> {{recipe.recipe_name}}</h1>
+                <P> {{recipe.recipe_description}} </P>
+                    <a style="font-size: 2vw;" class="link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
+                        aria-expanded="false" aria-controls="collapseWidthExample">
+                        View Image
+                    </a>
+                <div style="min-height: 120px;">
+                    <div class="collapse collapse-vertical" id="collapseWidthExample">
+                        <div class="card-body" style="width: 100%;">
+                            <p>this would be recipe.recipe_tinyblob}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="two">
+            <div class="container" style="width:90% ; height:100%; padding:50px;">
+                <div class="centre">
+                <h1>Ingredients</h1>
+                <br>
+                <p>{{recipe.ingredient_quantity}}</p>
+                <br>
+            </div>
+                </div>
+    </section>
+    <section class="four">
+        <div class="container" style="width:90% ; height:100%; padding:50px;">
+                <h1> Method</h1>
+                <br>
+                <p>{{recipe.recipe_method}}</p>
+            </div>
+        </div>
+    </section>
+    <section class="three">
+        <div class="container" style="width: 100%">
+            <div class="center">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <p class="pgreen">Prep time</p>
+                            </th>
+                            <td>
+                                <p class="pgreen">{{recipe.prep_time}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <p class="pgreen">Cook time</p>
+                            </th>
+                            <td>
+                                <p class="pgreen">{{recipe.cook_time}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <p class="pgreen">Course</p>
+                            </th>
+                            <td>
+                                <p class="pgreen">{{recipe.course}}</p>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <p class="pgreen">Method</p>
+                            </th>
+                            <td>
+                                <p class="pgreen">{{recipe.course}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <p class="pgreen">Cuisine</p>
+                            </th>
+                            <td>
+                                <p class="pgreen">{{recipe.cuisine}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <p class="pgreen">Serving size</p>
+                            </th>
+                            <td>
+                                <p class="pgreen">{{recipe.serving}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <p class="pgreen">Carbon footprint</p>
+                            </th>
+                            <td>
+                                <p class="pgreen">python ref here</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+{% endfor %}
+</footer>
+</html>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="four">
+    <div class="container" style="width:80% ; height:100%;" >
+    <div class="centre" >
+        <BR>
+        {% for collection in collections %}
+        <a class="collectionlink" href="/collections/{{collection.collection_id}}">{{collection.collection_name}}</a>
+        <br>
+        <BR>
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

@@ -5,7 +5,11 @@ from application import app
 from application.forms.new_user_form import SignUpForm
 from application.models.food_group import FoodGroup
 from application.models.recipe import Recipe
+from application.models.food_item import FoodItem
 from application.models.user_table import UserTable
+from application.models.food_source import FoodSource
+from application.forms.search_form import SearchForm
+from application.forms.searchNutrition import SearchNutritionForm
 
 # SIGNUP PAGE: uses a a python class SignUpForm made in new_user_form (in the forms folder) which is presented
 # to the user via Signup.html (templates) and when filled out correctly shows the page welcome_new_user.html (templates)
@@ -36,13 +40,59 @@ def home():
     return render_template("home.html")
     # return render_template("home.html")
 
-@app.route("/recipes")
-def recipes():
-    recipe1 = service.get_recipe_object(1)
-    return render_template("recipes.html", recipe1=recipe1)
+@app.route("/recipe/<int:recipe_id>")
+def recipes(recipe_id):
+    recipe = service.get_recipe_object(recipe_id)
+    return render_template("recipe.html", recipe=recipe)
+
+print(service.get_recipe_object(6))
 
 @app.route('/user_name')
 def user_name():
     return render_template('welcome_new_user.html', user_name=user_name)
 
+@app.route('/collectionsMenu')
+def collectionsmenu():
+    collections = service.get_collection_object_all()
+    return render_template("collectionsMenu.html", collections=collections)
 
+
+@app.route("/collections/<int:collection_id>")
+def collections(collection_id):
+    error = ""
+    recipes = service.get_recipes_from_collection(collection_id)
+    return render_template("collections.html", recipes=recipes, message=error)
+
+
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    error = ""
+    form = SearchForm(request.form)
+    user_search = form.search.data
+    if len(user_search) == 0:
+        error = "please enter a food group to search"
+    elif FoodSource.query.filter_by(source_name=user_search).first() == None:
+        error = "hmmm we don't seem to have any food sources by that name, try something else?"
+    else:
+        group = service.search_food_facts(user_search)
+        foods = service.get_foods_by_foodssource(user_search)
+        return render_template('searchresults.html', group=group, foods=foods)
+    return render_template('search.html', form=form, message=error)
+
+@app.route('/searchNutrition', methods=['GET', 'POST'])
+def searchNutrition():
+    error = ""
+    form = SearchNutritionForm(request.form)
+    user_search = form.search.data
+    quantity = form.quantity.data
+    if len(user_search) == 0:
+        error = "please enter a food to search"
+    elif type(quantity) != float:
+        error = "you need to enter a numeric quantity"
+    elif FoodItem.query.filter_by(food_name=user_search).first() == None:
+        error = "hmmm we don't seem to have any foods by that name, try something else?"
+    else:
+        nutritionList = service.get_nutrition_by_name(user_search)
+        environment_list = service.get_environmental_impact(user_search)
+        return render_template('searchNutritionResults.html', user_search=user_search, nutritionList=nutritionList, quantity=quantity, environment_list=environment_list)
+    return render_template('searchNutrition.html', form=form, message=error)
