@@ -170,4 +170,448 @@ def get_recipe_nutrition_total():
      print(nutrition_total_list)
 
 
+def get_recipe1_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(43)
+    nutrition_list_2 = get_nutrition_list(2)
+    nutrition_list_3 = get_nutrition_list(30)
+    nutrition_list_4 = get_nutrition_list(27)
+    nutrition_list_5 = get_nutrition_list(6)
+    nutrition_list_6 = get_nutrition_list(72)
+    nutrition_list_7 = get_nutrition_list(3)
+    nutrition_list_8 = get_nutrition_list(61)
+    nutrition_list_9 = get_nutrition_list(77)
+    nutrition_list_10 = get_nutrition_list(24)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i])+ float(nutrition_list_7[i])+ float(nutrition_list_8[i])+ float(nutrition_list_9[i])+float(nutrition_list_10[i])),
+    print(nutrition_total_list)
+
+
+
+def get_recipe2_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(69)
+    nutrition_list_2 = get_nutrition_list(63)
+    nutrition_list_3 = get_nutrition_list(14)
+    nutrition_list_4 = get_nutrition_list(16)
+    nutrition_list_5 = get_nutrition_list(39)
+    nutrition_list_6 = get_nutrition_list(24)
+    nutrition_list_7 = get_nutrition_list(7)
+    nutrition_list_8 = get_nutrition_list(28)
+    nutrition_list_9 = get_nutrition_list(1)
+    nutrition_list_10 = get_nutrition_list(4)
+    nutrition_list_11 = get_nutrition_list(77)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i])+ float(nutrition_list_7[i])+ float(nutrition_list_8[i])+ float(nutrition_list_9[i])+float(nutrition_list_10[i]) + float(nutrition_list_11[i])),
+    print(nutrition_total_list)
+
+
+def get_recipe3_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(43)
+    nutrition_list_2 = get_nutrition_list(30)
+    nutrition_list_3 = get_nutrition_list(2)
+    nutrition_list_4 = get_nutrition_list(65)
+    nutrition_list_5 = get_nutrition_list(47)
+    nutrition_list_6 = get_nutrition_list(53)
+    nutrition_list_7 = get_nutrition_list(26)
+    nutrition_list_8 = get_nutrition_list(3)
+    nutrition_list_9 = get_nutrition_list(71)
+    nutrition_list_10 = get_nutrition_list(77)
+    nutrition_list_11 = get_nutrition_list(4)
+    nutrition_list_12 = get_nutrition_list(48)
+    nutrition_list_13 = get_nutrition_list(57)
+    nutrition_list_14 = get_nutrition_list(28)
+    nutrition_list_15 = get_nutrition_list(46)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i])+ float(nutrition_list_7[i])+ float(nutrition_list_8[i])+ float(nutrition_list_9[i])+float(nutrition_list_10[i]) + float(nutrition_list_11[i]) + float(nutrition_list_12[i]) + float(nutrition_list_13[i]) + float(nutrition_list_14[i]) + float(nutrition_list_15[i])),
+    print(nutrition_total_list)
+
+
+def get_recipe4_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(52)
+    nutrition_list_2 = get_nutrition_list(41)
+    nutrition_list_3 = get_nutrition_list(62)
+    nutrition_list_4 = get_nutrition_list(35)
+    nutrition_list_5 = get_nutrition_list(23)
+    nutrition_list_6 = get_nutrition_list(4)
+    nutrition_list_7 = get_nutrition_list(25)
+    nutrition_list_8 = get_nutrition_list(66)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i])+ float(nutrition_list_7[i])+ float(nutrition_list_8[i])),
+    print(nutrition_total_list)
+
+
+def get_recipe5_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(55)
+    nutrition_list_2 = get_nutrition_list(7)
+    nutrition_list_3 = get_nutrition_list(34)
+    nutrition_list_4 = get_nutrition_list(67)
+    nutrition_list_5 = get_nutrition_list(21)
+    nutrition_list_6 = get_nutrition_list(47)
+    nutrition_list_7 = get_nutrition_list(22)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i])+ float(nutrition_list_7[i])),
+    print(nutrition_total_list)
+
+def get_recipe6_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(66)
+    nutrition_list_2 = get_nutrition_list(64)
+    nutrition_list_3 = get_nutrition_list(17)
+    nutrition_list_4 = get_nutrition_list(49)
+    nutrition_list_5 = get_nutrition_list(52)
+    nutrition_list_6 = get_nutrition_list(51)
+    nutrition_list_7 = get_nutrition_list(35)
+    nutrition_list_8 = get_nutrition_list(33)
+    nutrition_list_9 = get_nutrition_list(32)
+    nutrition_list_10 = get_nutrition_list(19)
+    nutrition_list_11 = get_nutrition_list(72)
+    nutrition_list_12 = get_nutrition_list(4)
+    nutrition_list_13 = get_nutrition_list(77)
+    nutrition_list_14 = get_nutrition_list(78)
+    nutrition_list_15 = get_nutrition_list(9)
+    nutrition_list_16 = get_nutrition_list(39)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(
+        nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i]) + float(
+        nutrition_list_7[i]) + float(nutrition_list_8[i]) + float(nutrition_list_9[i]) + float(
+        nutrition_list_10[i]) + float(nutrition_list_11[i]) + float(nutrition_list_12[i]) + float(
+        nutrition_list_13[i]) + float(nutrition_list_14[i]) + float(nutrition_list_15[i]) + float(
+        nutrition_list_16[i])),
+    print(nutrition_total_list)
+
+def get_recipe7_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(43)
+    nutrition_list_2 = get_nutrition_list(58)
+    nutrition_list_3 = get_nutrition_list(51)
+    nutrition_list_4 = get_nutrition_list(72)
+    nutrition_list_5 = get_nutrition_list(38)
+    nutrition_list_6 = get_nutrition_list(59)
+    nutrition_list_7 = get_nutrition_list(53)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(
+        nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i]) + float(
+        nutrition_list_7[i])),
+    print(nutrition_total_list)
+
+
+def get_recipe8_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(43)
+    nutrition_list_2 = get_nutrition_list(14)
+    nutrition_list_3 = get_nutrition_list(15)
+    nutrition_list_4 = get_nutrition_list(30)
+    nutrition_list_5 = get_nutrition_list(27)
+    nutrition_list_6 = get_nutrition_list(52)
+    nutrition_list_7 = get_nutrition_list(50)
+    nutrition_list_8 = get_nutrition_list(35)
+    nutrition_list_9 = get_nutrition_list(59)
+    nutrition_list_10 = get_nutrition_list(76)
+    nutrition_list_11 = get_nutrition_list(42)
+    nutrition_list_12 = get_nutrition_list(25)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(
+        nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i]) + float(
+        nutrition_list_7[i]) + float(nutrition_list_8[i]) + float(nutrition_list_9[i]) + float(
+        nutrition_list_10[i]) + float(nutrition_list_11[i]) + float(nutrition_list_12[i])),
+    print(nutrition_total_list)
+
+
+def get_recipe9_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(67)
+    nutrition_list_2 = get_nutrition_list(68)
+    nutrition_list_3 = get_nutrition_list(23)
+    nutrition_list_4 = get_nutrition_list(20)
+    nutrition_list_5 = get_nutrition_list(66)
+    nutrition_list_6 = get_nutrition_list(51)
+    nutrition_list_7 = get_nutrition_list(10)
+    nutrition_list_8 = get_nutrition_list(9)
+    nutrition_list_9 = get_nutrition_list(8)
+    nutrition_list_10 = get_nutrition_list(11)
+    nutrition_list_11 = get_nutrition_list(29)
+    nutrition_list_12 = get_nutrition_list(37)
+    nutrition_list_13 = get_nutrition_list(39)
+    nutrition_list_14 = get_nutrition_list(77)
+    nutrition_list_15 = get_nutrition_list(4)
+    nutrition_list_16 = get_nutrition_list(40)
+    nutrition_list_17 = get_nutrition_list(60)
+    nutrition_list_18 = get_nutrition_list(36)
+    nutrition_list_19 = get_nutrition_list(54)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(
+        nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i]) + float(
+        nutrition_list_7[i]) + float(nutrition_list_8[i]) + float(nutrition_list_9[i]) + float(
+        nutrition_list_10[i]) + float(nutrition_list_11[i]) + float(nutrition_list_12[i]) + float(
+        nutrition_list_13[i]) + float(nutrition_list_14[i]) + float(nutrition_list_15[i]) + float(
+        nutrition_list_16[i]) + float(nutrition_list_17[i]) + float(nutrition_list_18[i]) + float(
+        nutrition_list_19[i])),
+    print(nutrition_total_list)
+
+
+def get_recipe10_nutrition_total():
+    nutrition_list_1 = get_nutrition_list(70)
+    nutrition_list_2 = get_nutrition_list(44)
+    nutrition_list_3 = get_nutrition_list(5)
+    nutrition_list_4 = get_nutrition_list(45)
+    nutrition_list_5 = get_nutrition_list(43)
+    nutrition_list_6 = get_nutrition_list(25)
+    nutrition_list_7 = get_nutrition_list(6)
+    nutrition_list_8 = get_nutrition_list(18)
+    nutrition_list_9 = get_nutrition_list(72)
+    nutrition_total_list = []
+    for i in range(0, 10):
+        nutrition_total_list.append(float(nutrition_list_1[i]) + float(nutrition_list_2[i]) + float(nutrition_list_3[i]) + float(
+        nutrition_list_4[i]) + float(nutrition_list_5[i]) + float(nutrition_list_6[i]) + float(
+        nutrition_list_7[i]) + float(nutrition_list_8[i]) + float(nutrition_list_9[i])),
+    print(nutrition_total_list)
+
+
+
+# print(get_recipe1_nutrition_total())
+# print(get_recipe2_nutrition_total())
+# print(get_recipe3_nutrition_total())
+# print(get_recipe4_nutrition_total())
+# print(get_recipe5_nutrition_total())
+# print(get_recipe6_nutrition_total())
+# print(get_recipe7_nutrition_total())
+# print(get_recipe8_nutrition_total())
+# print(get_recipe9_nutrition_total())
+# print(get_recipe10_nutrition_total())
+
+def get_carbonfootprint_list(food_id):
+
+    total_cfp = db.session.query(FoodItem).filter_by(food_id=food_id).first()
+    cfp_list = [total_cfp.ghg_emission, total_cfp.land_use, total_cfp.freshwater_withdraw]
+    return cfp_list
+
+def get_carbonfootprint_recipe1():
+    cfp_list_1 = get_carbonfootprint_list(43)
+    cfp_list_2 = get_carbonfootprint_list(2)
+    cfp_list_3 = get_carbonfootprint_list(30)
+    cfp_list_4 = get_carbonfootprint_list(27)
+    cfp_list_5 = get_carbonfootprint_list(6)
+    cfp_list_6 = get_carbonfootprint_list(72)
+    cfp_list_7 = get_carbonfootprint_list(3)
+    cfp_list_8 = get_carbonfootprint_list(61)
+    cfp_list_9 = get_carbonfootprint_list(77)
+    cfp_list_10 = get_carbonfootprint_list(24)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i]) + float(cfp_list_8[i]) + float(cfp_list_9[i]) + float(cfp_list_10[i])),
+    print(cfp_total_list)
+
+
+
+def get_carbonfootprint_recipe2():
+    cfp_list_1 = get_carbonfootprint_list(69)
+    cfp_list_2 = get_carbonfootprint_list(63)
+    cfp_list_3 = get_carbonfootprint_list(14)
+    cfp_list_4 = get_carbonfootprint_list(16)
+    cfp_list_5 = get_carbonfootprint_list(39)
+    cfp_list_6 = get_carbonfootprint_list(24)
+    cfp_list_7 = get_carbonfootprint_list(7)
+    cfp_list_8 = get_carbonfootprint_list(28)
+    cfp_list_9 = get_carbonfootprint_list(1)
+    cfp_list_10 = get_carbonfootprint_list(4)
+    cfp_list_11 = get_carbonfootprint_list(77)
+
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i]) + float(cfp_list_8[i]) + float(cfp_list_9[i]) + float(cfp_list_10[i]) + float(cfp_list_11[i])),
+    print(cfp_total_list)
+
+
+def get_carbonfootprint_recipe3():
+    cfp_list_1 = get_carbonfootprint_list(43)
+    cfp_list_2 = get_carbonfootprint_list(30)
+    cfp_list_3 = get_carbonfootprint_list(2)
+    cfp_list_4 = get_carbonfootprint_list(65)
+    cfp_list_5 = get_carbonfootprint_list(47)
+    cfp_list_6 = get_carbonfootprint_list(53)
+    cfp_list_7 = get_carbonfootprint_list(26)
+    cfp_list_8 = get_carbonfootprint_list(3)
+    cfp_list_9 = get_carbonfootprint_list(71)
+    cfp_list_10 = get_carbonfootprint_list(77)
+    cfp_list_11 = get_carbonfootprint_list(4)
+    cfp_list_12 = get_carbonfootprint_list(48)
+    cfp_list_13 = get_carbonfootprint_list(57)
+    cfp_list_14 = get_carbonfootprint_list(28)
+    cfp_list_15 = get_carbonfootprint_list(46)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i]) + float(cfp_list_8[i]) + float(cfp_list_9[i]) + float(cfp_list_10[i]) + float(cfp_list_11[i]) + float(cfp_list_12[i]) + float(cfp_list_13[i]) + float(cfp_list_14[i]) + float(cfp_list_15[i])),
+    print(cfp_total_list)
+
+def get_carbonfootprint_recipe4():
+    cfp_list_1 = get_carbonfootprint_list(52)
+    cfp_list_2 = get_carbonfootprint_list(41)
+    cfp_list_3 = get_carbonfootprint_list(62)
+    cfp_list_4 = get_carbonfootprint_list(35)
+    cfp_list_5 = get_carbonfootprint_list(23)
+    cfp_list_6 = get_carbonfootprint_list(4)
+    cfp_list_7 = get_carbonfootprint_list(25)
+    cfp_list_8 = get_carbonfootprint_list(66)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i]) + float(cfp_list_8[i])),
+    print(cfp_total_list)
+
+def get_carbonfootprint_recipe5():
+    cfp_list_1 = get_carbonfootprint_list(55)
+    cfp_list_2 = get_carbonfootprint_list(7)
+    cfp_list_3 = get_carbonfootprint_list(34)
+    cfp_list_4 = get_carbonfootprint_list(67)
+    cfp_list_5 = get_carbonfootprint_list(21)
+    cfp_list_6 = get_carbonfootprint_list(47)
+    cfp_list_7 = get_carbonfootprint_list(22)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i])),
+    print(cfp_total_list)
+
+def get_carbonfootprint_recipe6():
+    cfp_list_1 = get_carbonfootprint_list(66)
+    cfp_list_2 = get_carbonfootprint_list(64)
+    cfp_list_3 = get_carbonfootprint_list(17)
+    cfp_list_4 = get_carbonfootprint_list(49)
+    cfp_list_5 = get_carbonfootprint_list(52)
+    cfp_list_6 = get_carbonfootprint_list(51)
+    cfp_list_7 = get_carbonfootprint_list(35)
+    cfp_list_8 = get_carbonfootprint_list(33)
+    cfp_list_9 = get_carbonfootprint_list(32)
+    cfp_list_10 = get_carbonfootprint_list(19)
+    cfp_list_11 = get_carbonfootprint_list(72)
+    cfp_list_12 = get_carbonfootprint_list(4)
+    cfp_list_13 = get_carbonfootprint_list(77)
+    cfp_list_14 = get_carbonfootprint_list(78)
+    cfp_list_15 = get_carbonfootprint_list(9)
+    cfp_list_16 = get_carbonfootprint_list(39)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i]) + float(cfp_list_8[i]) + float(cfp_list_9[i]) + float(cfp_list_10[i]) + float(cfp_list_11[i]) + float(cfp_list_12[i]) + float(cfp_list_13[i]) + float(cfp_list_14[i]) + float(cfp_list_15[i]) + float(cfp_list_16[i])),
+    print(cfp_total_list)
+
+
+def get_carbonfootprint_recipe7():
+    cfp_list_1 = get_carbonfootprint_list(43)
+    cfp_list_2 = get_carbonfootprint_list(58)
+    cfp_list_3 = get_carbonfootprint_list(51)
+    cfp_list_4 = get_carbonfootprint_list(72)
+    cfp_list_5 = get_carbonfootprint_list(38)
+    cfp_list_6 = get_carbonfootprint_list(59)
+    cfp_list_7 = get_carbonfootprint_list(53)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i])),
+    print(cfp_total_list)
+
+def get_carbonfootprint_recipe8():
+    cfp_list_1 = get_carbonfootprint_list(43)
+    cfp_list_2 = get_carbonfootprint_list(14)
+    cfp_list_3 = get_carbonfootprint_list(15)
+    cfp_list_4 = get_carbonfootprint_list(30)
+    cfp_list_5 = get_carbonfootprint_list(27)
+    cfp_list_6 = get_carbonfootprint_list(52)
+    cfp_list_7 = get_carbonfootprint_list(50)
+    cfp_list_8 = get_carbonfootprint_list(35)
+    cfp_list_9 = get_carbonfootprint_list(59)
+    cfp_list_10 = get_carbonfootprint_list(76)
+    cfp_list_11 = get_carbonfootprint_list(42)
+    cfp_list_12 = get_carbonfootprint_list(25)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i]) + float(cfp_list_8[i]) + float(cfp_list_9[i]) + float(cfp_list_10[i]) + float(cfp_list_11[i]) + float(cfp_list_12[i])),
+    print(cfp_total_list)
+
+def get_carbonfootprint_recipe9():
+    cfp_list_1 = get_carbonfootprint_list(67)
+    cfp_list_2 = get_carbonfootprint_list(68)
+    cfp_list_3 = get_carbonfootprint_list(23)
+    cfp_list_4 = get_carbonfootprint_list(20)
+    cfp_list_5 = get_carbonfootprint_list(66)
+    cfp_list_6 = get_carbonfootprint_list(51)
+    cfp_list_7 = get_carbonfootprint_list(10)
+    cfp_list_8 = get_carbonfootprint_list(9)
+    cfp_list_9 = get_carbonfootprint_list(8)
+    cfp_list_10 = get_carbonfootprint_list(11)
+    cfp_list_11 = get_carbonfootprint_list(29)
+    cfp_list_12 = get_carbonfootprint_list(37)
+    cfp_list_13 = get_carbonfootprint_list(39)
+    cfp_list_14 = get_carbonfootprint_list(77)
+    cfp_list_15 = get_carbonfootprint_list(4)
+    cfp_list_16 = get_carbonfootprint_list(40)
+    cfp_list_17 = get_carbonfootprint_list(60)
+    cfp_list_18 = get_carbonfootprint_list(36)
+    cfp_list_19 = get_carbonfootprint_list(54)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i]) + float(cfp_list_8[i]) + float(cfp_list_9[i]) + float(cfp_list_10[i]) + float(cfp_list_11[i]) + float(cfp_list_12[i]) + float(cfp_list_13[i]) + float(cfp_list_14[i]) + float(cfp_list_14[i]) + float(cfp_list_16[i]) + float(cfp_list_17[i]) + float(cfp_list_18[i]) + float(cfp_list_19[i])),
+    print(cfp_total_list)
+
+def get_carbonfootprint_recipe10():
+    cfp_list_1 = get_carbonfootprint_list(70)
+    cfp_list_2 = get_carbonfootprint_list(44)
+    cfp_list_3 = get_carbonfootprint_list(5)
+    cfp_list_4 = get_carbonfootprint_list(45)
+    cfp_list_5 = get_carbonfootprint_list(43)
+    cfp_list_6 = get_carbonfootprint_list(25)
+    cfp_list_7 = get_carbonfootprint_list(6)
+    cfp_list_8 = get_carbonfootprint_list(18)
+    cfp_list_9 = get_carbonfootprint_list(72)
+    cfp_total_list = []
+    for i in range(0, 3):
+        cfp_total_list.append(float(cfp_list_1[i]) + float(cfp_list_2[i]) + float(cfp_list_3[i]) + float(
+        cfp_list_4[i]) + float(cfp_list_5[i]) + float(cfp_list_6[i]) + float(
+        cfp_list_7[i]) + float(cfp_list_8[i]) + float(cfp_list_9[i])),
+    print(cfp_total_list)
+
+# Function to calculate total carbon footprint for a recipe
+
+def get_totalcarbonfootprint_recipe(rec_id):
+    ingredient = db.session.query(Ingredient).filter(db.recipe_id == rec_id).all
+    ingredientlist = []
+    if ingredient == Ingredient.recipe_id :
+        ingredientlist.append(Ingredient.ingredient_id)
+
+#        final_cfp = db.session(FoodItem).filter_by(food_id=recipe_cfp).first()
+
+    else :
+        return None
+
+print(get_totalcarbonfootprint_recipe(1))
+
+# def get_recipe_matching_collection_id(coll_id):
+#     recipe_collection = db.session.query(RecipeCollection).filter(collection_id=coll_id).first()
+#     if recipe_collection == None:
+#         print('nothing found')
+#     else:
+#         matching_recipe = recipe_collection.recipe_id
+#         final_recipes = db.session.query(Recipe).filter_by(recipe_id=matching_recipe).first()
+#         if final_recipes == None:
+#             print('No')
+#         else:
+#             return final_recipes
 
