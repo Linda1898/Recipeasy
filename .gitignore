@@ -2,4 +2,4 @@
 __pycache__/
 .venv/
 .DS_Store
-.messabout.txt
+messabout.txt

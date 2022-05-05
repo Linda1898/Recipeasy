@@ -73,6 +73,8 @@ def get_recipe_collection_object(id):
 def get_user_table_object(id):
     user_table = db.session.query(UserTable).filter_by(user_id=id).first()
     return user_table
+x = get_user_table_object(3)
+print(x.user_name)
 
 def add_new_user(user):
     db.session.add(user)
@@ -82,7 +84,7 @@ def get_recipe_dict(id):
     if id > 0:
         return Recipe.query.get(id)
     else:
-        return none
+        return None
 
 # food = get_food_item_object(1)
 # print(food)
@@ -101,7 +103,10 @@ def get_recipe_matching_collection_id(coll_id):
         else:
             return final_recipes
 
-print(get_recipe_matching_collection_id(2))
+recipe_collection = db.session.query(RecipeCollection).filter_by(collection_id=1).first()
+print(recipe_collection.__dict__)
+
+# print(get_recipe_matching_collection_id(3))
 
 
 

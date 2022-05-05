@@ -89,7 +89,10 @@ def user_name():
 #         if "user" in session:
 #             return redirect(url_for("user_name"))
 #     return render_template('signup.html', form=form, message=error)
+
 # THEN TO LOG OUT:
+
+
 # @app.route('/logout')
 # def logout():
 #     session.pop("user", None)
