@@ -8,12 +8,15 @@
                 <P> {{recipe.recipe_description}} </P>
                     <a style="font-size: 2vw;" class="link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
                         aria-expanded="false" aria-controls="collapseWidthExample">
-                        View Image
+                        click for fun facts
                     </a>
                 <div style="min-height: 120px;">
                     <div class="collapse collapse-vertical" id="collapseWidthExample">
                         <div class="card-body" style="width: 100%;">
-                            <p>this would be recipe.recipe_tinyblob}</p>
+                            <p> Total carbon footprint for this recipe:</p>
+                            <p>Greenhouse emmissions: {{(carbonfp[0]) | round(2)}} g</p>
+                            <p>Landuse: {{(carbonfp[1]) | round(2)}} miles</p>
+                            <p>Freshwater withdrawel: {{(carbonfp[2]) | round(2)}} g</p>
                         </div>
                     </div>
                 </div>
@@ -21,8 +24,8 @@
         </div>
     </section>
     <section class="two">
-            <div class="container" style="width:90% ; height:100%; padding:50px;">
-                <div class="centre">
+            <div class="container">
+                <div class="center">
                 <h1>Ingredients</h1>
                 <br>
                 <p>{{recipe.ingredient_quantity}}</p>
@@ -31,15 +34,15 @@
                 </div>
     </section>
     <section class="four">
-        <div class="container" style="width:90% ; height:100%; padding:50px;">
+        <div class="container">
+            <div class="center">
                 <h1> Method</h1>
-                <br>
-                <p>{{recipe.recipe_method}}</p>
+                <p style="font-size:1.5vw">{{recipe.recipe_method}}</p>
             </div>
         </div>
     </section>
     <section class="three">
-        <div class="container" style="width: 100%">
+        <div class="container">
             <div class="center">
                 <table class="table">
                     <tbody>
@@ -90,16 +93,26 @@
                                 <p class="pgreen">{{recipe.serving}}</p>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">
-                                <p class="pgreen">Carbon footprint</p>
-                            </th>
-                            <td>
-                                <p class="pgreen">python ref here</p>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>
+</body>
+    <section class="four">
+        <div class="container" style="width: 100%">
+            <div class="center">
+                <p> Nutritional info per serving</p>
+                <p>Kj: {{((nutrition[0])/recipe.serving) | round(2)}} g</p>
+                <p>Kcal: {{((nutrition[1])/recipe.serving) | round(2)}} g</p>
+                <p>Fat: {{((nutrition[2])/recipe.serving) | round(2)}} g</p>
+                <p>Saturates: {{((nutrition[3])/recipe.serving) | round(2)}} g</p>
+                <p>Carbohydrate: {{((nutrition[4])//recipe.serving) | round(2)}} g</p>
+                <p>Sugar: {{((nutrition[5])/recipe.serving) | round(2)}} g</p>
+                <p>Starch: {{((nutrition[6])/recipe.serving) | round(2)}} g</p>
+                <p>Fibre: {{((nutrition[7])/recipe.serving) | round(2)}} g</p>
+                <p>Protein: {{((nutrition[8])/recipe.serving) | round(2)}} g</p>
+                <p>Salt: {{((nutrition[9])/recipe.serving) | round(2)}} g</p>
             </div>
         </div>
     </section>

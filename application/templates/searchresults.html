@@ -41,16 +41,4 @@
             </form>
         </div>
     </div>
-    </div>
-        <section class="two">
-            <div class="container" style="width:100%;">
-    <div class="center" style="width:100%;">
-                <h1 style="font-size:1.5vw">  Here are some yummy ingredients, with some very cool facts, from this catagory. </h1>
-                    <br>
-        {% for food in foods %}
-            <p style="font-size:1.5vw" > Ingredient: {{food.food_name}} Greenhouse emissions: {{food.ghg_emission}} Land use: {{food.land_use}}  Water withdraw: {{food.freshwater_withdraw}}  </p>
-                {% endfor %}
-        </div>
-    </div>
-    </div>
 {% endblock %}

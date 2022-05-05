@@ -37,7 +37,7 @@
                 <div class="container-fluid">
                     <a class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/home">
-                            <p class="pnav">Home</p>
+                            <p class="pnav" href="/home" >Home</p>
                         </a>
                     </a>
                     <a class="nav-item">
@@ -47,23 +47,18 @@
                     </a>
                     <a class="nav-item">
                         <a class="nav-link" href="/searchNutrition">
-                            <p class="pnav">Search by ingredient</p>
+                            <p class="pnav">Search nutrition and environmental impact</p>
                         </a>
                     </a>
                     <a class="nav-item">
                         <a class="nav-link" href="/search">
-                            <p class="pnav">Search by food group</p>
-                        </a>
-                    </a>
-                    <a class="nav-item">
-                        <a class="nav-link" href="/signup">
-                            <p class="pnav">Favourites</p>
+                            <p class="pnav">Search fun facts</p>
                         </a>
                     </a>
                 </div>
             </nav>
             <div class="center">
-                <h1 class="header"> RECIPEASY.</h1>
+                <a class="header" href="/home"> RECIPEASY.</a>
                 <p>Food made simple.</p>
             </div>
         </div>
@@ -76,10 +71,10 @@
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img style="width:100%" src="{{ url_for('static', filename='images/sqravo.jpeg')}}">
+                                    <img style="width:100%" src="{{ url_for('static', filename='images/sqrmulti.jpeg')}}">
                                 </div>
                                 <div class="carousel-item">
-                                    <img style="width:100%" src="{{ url_for('static', filename='images/sqcoconut.jpeg')}}">
+                                    <img style="width:100%" src="{{ url_for('static', filename='images/images/square.png')}}">
                                 </div>
                             </div>
                         </div>
@@ -88,7 +83,7 @@
                         <div>
                         <h1> FUN FACTS ABOUT YOUR FOOD</h1>
                         <P> Search food groups to find facts and recipes! </P>
-                            <a class="pinklink" href="/search">Learn</a>
+                            <a class="h1hover" href="/search">Learn</a>
                     </div>
                 </div>
             </div>
@@ -101,7 +96,7 @@
                     <div class="col">
                         <h2> SEARCH RECIPES FOR EVERY OCCASION</h2>
                         <P class="pgreen"> Quick search recipes - food for every mood</P>
-                        <a class="greenlink" href="/collectionsMenu">Learn</a>
+                        <a <a class="h1hoverg" href="/collectionsMenu">Learn</a>
                     </div>
                     <div class="col">
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -110,7 +105,7 @@
                                     <img style="width:100%" src="{{ url_for('static', filename='images/sqravo.jpeg')}}">
                                 </div>
                                 <div class="carousel-item">
-                                    <img style="width:100%" src="{{ url_for('static', filename='images/sqcoconut.jpeg')}}">
+                                    <img style="width:100%" src="{{ url_for('static', filename='images/sqrmulti.jpeg')}}">
                                 </div>
                             </div>
                         </div>
@@ -127,10 +122,10 @@
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img style="width:100%" src="{{ url_for('static', filename='images/sqravo.jpeg')}}">
+                                    <img style="width:100%" src="{{ url_for('static', filename='images/sqcoconut.jpeg')}}">
                                 </div>
                                 <div class="carousel-item">
-                                    <img style="width:100%" src="{{ url_for('static', filename='images/sqcoconut.jpeg')}}">
+                                    <img style="width:100%" src="{{ url_for('static', filename='images/images/square.png')}}">
                                 </div>
                             </div>
                         </div>
@@ -138,7 +133,7 @@
                     <div class="col">
                         <h1> NUTRITIONAL INFORMATION AND ENVIRONMENT IMPACT</h1>
                         <P> Health concious and care for the planet?</P>
-                        <a class="link" href="/searchNutrition">Learn</a>
+                        <a <a class="h1hover" href="/searchNutrition">Learn</a>
                     </div>
                 </div>
             </div>

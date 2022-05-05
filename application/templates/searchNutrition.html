@@ -4,13 +4,15 @@
     <div class="container">
         <div class="center">
             <form action="" method="post">
+                <h1> GOT YOUR OWN RECIPE?</h1>
+                <p> Use our calculator to find the nutritional value and environmental impact of your food!</p>
                 <p>
                     {{form.search.label}} <br>
                     {{form.search(size=30)}}
                 </p>
                 <p>{{form.quantity.label}} <br>
                     {{form.quantity(size=30)}}
-                <p> {{form.submit()}}</p>
+                <p style="pinklink"> {{form.submit()}}</p>
                 <p> {{message}}</p>
             </form>
         </div>

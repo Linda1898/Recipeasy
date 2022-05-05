@@ -3,6 +3,7 @@
 <section class="two">
     <div class="container">
         <div class="center">
+            <h1>{{user_search}}</h1>
             <p>
             KCAL:
                 {{ (((nutritionList.energy_kcal)/100)*quantity)|round(2)}}
@@ -42,13 +43,24 @@
     <div class="container">
         <div class="center">
             <p class="pgreen">
-            Green house gass emmission: {{(((environment_list.ghg_emission)/100)*quantity)|round(2)}}
+            Green house gass emmission: {{(((environment_list.ghg_emission)/100)*quantity)|round(2)}} g
                 <br>
-            Land use: {{(((environment_list.land_use)/100)*quantity)|round(2)}}
+            Land use: {{(((environment_list.land_use)/100)*quantity)|round(2)}} m
                 <br>
-            Freshwater withdraw: {{(((environment_list.freshwater_withdraw)/100)*quantity)|round(2)}}
+            Freshwater withdraw: {{(((environment_list.freshwater_withdraw)/100)*quantity)|round(2)}} l
                 <br>
-            Land use: {{(((environment_list.land_use)/100)*quantity)|round(2)}}
+            </p>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="four">
+    <div class="container">
+        <div class="center">
+            <h1>YOUR RANDOM FUN FACT:</h1>
+            <P>If you're not too sure what this means, see how everyday objects impact the environment with this random fun fact!</P>
+            <p>{{fact}}<p>
+            <br>
             </p>
         </div>
     </div>

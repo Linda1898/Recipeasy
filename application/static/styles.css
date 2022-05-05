@@ -64,10 +64,45 @@ h1 {
     font-size: 3vw;
 }
 
+.h1hover {
+    font-family: 'Abril Fatface', cursive;
+    color: #D67D70;
+    font-size: 3vw;
+    text-decoration: none;
+}
+.h1hoverg {
+    font-family: 'Abril Fatface', cursive;
+    color: #B8D686;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+.h1hover:hover {
+    font-family: 'Abril Fatface', cursive;
+    color: #D9BEBA;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+.h1hoverg:hover {
+    font-family: 'Abril Fatface', cursive;
+    color: #D9BEBA;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
 .header {
     font-family: 'Abril Fatface', cursive;
     color: #D67D70;
     font-size: 15vw;
+    text-decoration: none;
+}
+
+.header:hover {
+    font-family: 'Abril Fatface', cursive;
+    color: #B8D686;
+    font-size: 15vw;
+    text-decoration: none;
 }
 
 h2 {
@@ -85,7 +120,7 @@ p {
 .pnav {
     font-family: 'Comfortaa', cursive;
     color: #D67D70;
-    font-size: 0.9vw;
+    font-size: 1.4vw;
 }
 
 .pgreen {
@@ -189,14 +224,18 @@ p {
   .pnav:hover {
     font-family: 'Comfortaa', cursive;
     color: #B8D686;
-    font-size: 0.9vw;
+    font-size: 1.4vw;
+    }
+
+     .row {
+        width: 100%;
+        align-items: center;
     }
 
 @media screen and (max-width: 800px) and (min-height: 500px) {
 
     .row {
         width: 100%;
-        flex-direction: column;
         align-items: center;
     }
 

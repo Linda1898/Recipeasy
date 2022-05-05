@@ -43,9 +43,38 @@ def home():
 @app.route("/recipe/<int:recipe_id>")
 def recipes(recipe_id):
     recipe = service.get_recipe_object(recipe_id)
-    return render_template("recipe.html", recipe=recipe)
+    if recipe_id == 1:
+        carbonfp = service.get_carbonfootprint_recipe1()
+        nutrition = service.get_recipe1_nutrition_total()
+    elif recipe_id == 2:
+        carbonfp = service.get_carbonfootprint_recipe2()
+        nutrition = service.get_recipe2_nutrition_total()
+    elif recipe_id == 3:
+        carbonfp = service.get_carbonfootprint_recipe3()
+        nutrition = service.get_recipe3_nutrition_total()
+    elif recipe_id == 4:
+        carbonfp = service.get_carbonfootprint_recipe4()
+        nutrition = service.get_recipe4_nutrition_total()
+    elif recipe_id == 5:
+        carbonfp = service.get_carbonfootprint_recipe5()
+        nutrition = service.get_recipe5_nutrition_total()
+    elif recipe_id == 6:
+        carbonfp = service.get_carbonfootprint_recipe6()
+        nutrition = service.get_recipe6_nutrition_total()
+    elif recipe_id == 7:
+        carbonfp = service.get_carbonfootprint_recipe7()
+        nutrition = service.get_recipe7_nutrition_total()
+    elif recipe_id == 8:
+        carbonfp = service.get_carbonfootprint_recipe8()
+        nutrition = service.get_recipe8_nutrition_total()
+    elif recipe_id == 9:
+        carbonfp = service.get_carbonfootprint_recipe9()
+        nutrition = service.get_recipe9_nutrition_total()
+    elif recipe_id == 10:
+        carbonfp = service.get_carbonfootprint_recipe10()
+        nutrition = service.get_recipe10_nutrition_total()
+    return render_template("recipe.html", recipe=recipe, carbonfp=carbonfp, nutrition=nutrition)
 
-print(service.get_recipe_object(6))
 
 @app.route('/user_name')
 def user_name():
@@ -76,7 +105,7 @@ def search():
     else:
         group = service.search_food_facts(user_search)
         foods = service.get_foods_by_foodssource(user_search)
-        return render_template('searchresults.html', group=group, foods=foods)
+        return render_template('searchresults.html', user_search=user_search, group=group, foods=foods)
     return render_template('search.html', form=form, message=error)
 
 @app.route('/searchNutrition', methods=['GET', 'POST'])
@@ -94,5 +123,8 @@ def searchNutrition():
     else:
         nutritionList = service.get_nutrition_by_name(user_search)
         environment_list = service.get_environmental_impact(user_search)
-        return render_template('searchNutritionResults.html', user_search=user_search, nutritionList=nutritionList, quantity=quantity, environment_list=environment_list)
+        num = service.get_random_number()
+        fact = service.get_fact(num)
+        user_search = user_search.capitalize()
+        return render_template('searchNutritionResults.html', user_search=user_search, nutritionList=nutritionList, quantity=quantity, environment_list=environment_list, fact=fact)
     return render_template('searchNutrition.html', form=form, message=error)
